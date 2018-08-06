@@ -23,7 +23,7 @@ app.post('/edited', (req, res) => {
     const content = req.body.content;
 
     Object.keys(content).forEach(contentKey => {
-      if (pageData[contentKey]) {
+      if (pageData[contentKey] !== undefined) {
         pageData[contentKey] = content[contentKey];
       }
     });
